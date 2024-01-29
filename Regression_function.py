@@ -14,6 +14,3 @@ def regression_vec(obj,obj2, dim):
     xr.apply_ufunc(
         st_p, obj,obj2, input_core_dims= [ [dim],[dim] ],
         output_core_dims=[[]],vectorize=True)]
-def t_idxr(dat):
-    return [str(dat.compute().time.dt.year[0].data),
-            str(dat.compute().compute().time.dt.year[-1].data)]
